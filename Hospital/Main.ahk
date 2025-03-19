@@ -1706,11 +1706,11 @@ regulation1(Element?, *) {
     ])
 }
 regulation2(Element?, *) {
-    list := ["3.5", "2.12", "3.7", "2.18", "2.19", "1.2", "2.7", "1.4", "2.9", "2.4", "1.3", "2.16", "2.17", "3.3", "2.13", "3.6", "2.5", "2.8", "4.2", "4.1", "2.10", "2.15", "1.1", "2.2", "2.20", "2.6", "3.6.1", "2.11", "3.1", "3.9", "2.14", "3.8", "4.0", "2.3", "2.1", "3.2", "3.4"]
+    list := ["3.5", "2.3.3", "2.7.1", "2.7.2", "1.2", "2.7", "1.4", "2.9", "2.4", "1.3", "2.4.3", "2.4.4", "3.3", "2.3.4", "2.5", "2.8", "4.2", "4.1", "2.3.1", "2.4.2", "1.1", "2.2", "3.4.1", "2.6", "3.6.1", "2.3.2", "3.1", "2.4.1", "2.3", "2.1", "3.2", "3.4"]
     Loop {
-        r1 := Random(1, 37)
-        r2 := Random(1, 37)
-        r3 := Random(1, 37)
+        r1 := Random(1, 31)
+        r2 := Random(1, 31)
+        r3 := Random(1, 31)
     } Until (r1 != r2) && (r1 != r3) && (r2 != r3)
 
     RPAction([
@@ -1867,23 +1867,23 @@ Cast(Element?, *) {
 }
 MedHeal(Element?, *) {
     RPAction([
-        ["Chat", "/med heal  " G_Binds_cfg["Global_HealPrice"] "{Left}{Left}{Left}{Left}" S100, S100]
+        ["Chat", "/med heal  " G_Binds_cfg["Global_HealPrice"] "{Left}{Left}{Left}{Left}", S100, S100]
     ])
 }
 GpsCansel(Element?, *) {
     RPAction([
-        ["Chat", "/gps cancel {ENTER}" S100, S100]
+        ["Chat", "/gps cancel {ENTER}", S100, S100]
     ])
 }
 Calls(Element?, *) {
     RPAction([
-        ["Chat", "/calls {ENTER}" S100, S100]
+        ["Chat", "/calls {ENTER}", S100, S100]
     ])
 }
 PassAccept(Element?, *) {
     RPAction([
-        ["Chat", "/pass accept {ENTER}" S100, S100]
-    ])
+        ["Chat", "/pass accept {ENTER}", S100, S100]
+    ])
 }
 
 SetHotKey(G_Binds["ForceStop"]         [1], ForceStop)
